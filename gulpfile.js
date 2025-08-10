@@ -12,7 +12,6 @@ const path = require('path');
 const panini = require('panini');
 const uglify = require('gulp-uglify-es').default;
 const sourcemaps = require('gulp-sourcemaps');
-const imagemin = require('gulp-imagemin');
 const removeCode = require('gulp-remove-code');
 const removeLog = require('gulp-remove-logging');
 const prettyHtml = require('gulp-pretty-html');
@@ -21,7 +20,6 @@ const htmllint = require('gulp-htmllint');
 const jshint = require('gulp-jshint');
 const htmlreplace = require('gulp-html-replace');
 const newer = require('gulp-newer');
-const autoprefixer = require('gulp-autoprefixer');
 const accessibility = require('gulp-accessibility');
 const babel = require('gulp-babel');
 const nodepath = 'node_modules/';
@@ -47,12 +45,12 @@ function setupBulma() {
 function compileSASS() {
   console.log('---------------COMPILING BULMA SASS---------------');
   return src(['src/assets/sass/bulma.sass'])
+    .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed',
-      sourceMap: true,
       includePaths: bourbon
     }).on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/assets/css'))
     .pipe(browserSync.stream());
 }
@@ -61,12 +59,12 @@ function compileSASS() {
 function compileSCSS() {
   console.log('---------------COMPILING SCSS---------------');
   return src(['src/assets/scss/core_kit1.scss'])
+    .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed',
-      sourceMap: true,
       includePaths: bourbon
     }).on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/assets/css'))
     .pipe(browserSync.stream());
 }
@@ -170,31 +168,49 @@ function browserSyncInit(done) {
 // COPIES AND MINIFY IMAGE TO DIST
 function copyImages() {
   console.log('---------------OPTIMIZING IMAGES---------------');
-  return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg)')
-    .pipe(newer('dist/assets/img/'))
-    //.pipe(imagemin())
-    .pipe(dest('dist/assets/img/'))
-    .pipe(browserSync.stream());
+  // Use native copy to avoid any potential binary corruption in streams
+  const sourceDir = 'src/assets/img';
+  const destDir = 'dist/assets/img';
+  if (fs.existsSync(destDir)) {
+    fs.rmSync(destDir, { recursive: true, force: true });
+  }
+  fs.mkdirSync(destDir, { recursive: true });
+  fs.cpSync(sourceDir, destDir, { recursive: true });
+  browserSync.stream();
+  return src(destDir);
 }
 
 
 // PLACES FONT FILES IN THE DIST FOLDER
 function copyFont() {
   console.log('---------------COPYING FONTS INTO DIST FOLDER---------------');
-  return src([
-      'src/assets/font/**/*',
-    ])
-    .pipe(dest('dist/assets/fonts'))
+  const sourceDir = 'src/assets/font';
+  const destDir = 'dist/assets/fonts';
+  if (fs.existsSync(destDir)) {
+    fs.rmSync(destDir, { recursive: true, force: true });
+  }
+  fs.mkdirSync(destDir, { recursive: true });
+  if (fs.existsSync(sourceDir)) {
+    fs.cpSync(sourceDir, destDir, { recursive: true });
+  }
+  browserSync.stream();
+  return src(destDir);
+}
+
+// COPY CNAME TO DIST ROOT
+function copyCNAME() {
+  return src('CNAME', { allowEmpty: true })
+    .pipe(dest('dist'))
     .pipe(browserSync.stream());
 }
 
-// PLACES DATA FILES IN THE DIST FOLDER
-function copyData() {
-  console.log('---------------COPYING DATA INTO DIST FOLDER---------------');
-  return src([
-    'src/data/**/*',
-    'CNAME'
-  ])
+// PLACES DATA FILES IN THE DIST FOLDER IF PRESENT
+function copyOptionalData(done) {
+  console.log('---------------COPYING DATA INTO DIST FOLDER (IF PRESENT)---------------');
+  if (!fs.existsSync('src/data')) {
+    return done();
+  }
+  return src('src/data/**/*')
     .pipe(dest('dist/assets/data'))
     .pipe(browserSync.stream());
 }
@@ -313,7 +329,10 @@ exports.accessibility = HTMLAccessibility;
 exports.setup = series(setupBulma);
 
 // DEV
-exports.dev = series(cleanDist, copyFont, copyData, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS, browserSyncInit, watchFiles);
+exports.dev = series(cleanDist, copyFont, copyCNAME, copyOptionalData, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS, browserSyncInit, watchFiles);
 
 // PROD BUILD
-exports.build = series(cleanDist, copyFont, copyData, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS);
+exports.build = series(cleanDist, copyFont, copyCNAME, copyOptionalData, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS);
+
+// Debug-only task to test image copying in isolation
+exports.devimg = series(cleanDist, copyImages);

@@ -34,6 +34,33 @@ To use this template, your computer needs:
 - Run `gulp dev`
 - Your site is now viewable at this URL: http://localhost:3000
 
+### Previewing the Production Build Locally
+
+Sometimes you want to see exactly what will be deployed. Build the site and serve the `dist/` folder with a static server.
+
+1) Install dependencies and build (same as CI):
+
+```bash
+npm ci
+npm run build
+```
+
+2) Serve the compiled site from `dist/`:
+
+```bash
+# Recommended shortcut
+npm run preview
+
+# Or manually with a custom port
+npx --yes serve -s dist -l 8080
+```
+
+Then open `http://localhost:8080`.
+
+Notes:
+- On macOS, port 5000 is often occupied by AirPlay (AirTunes) and will return 403. If that happens, pick a different port with `-l` (e.g., `-l 8080`).
+- Stop the local preview with `Ctrl+C` in the terminal.
+
 ### Deploying To Production:
 
 - Uses [github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action) to build a `gh-pages` branch for release on push
