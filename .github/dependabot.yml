@@ -1,18 +1,18 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "10:00"
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: scrollreveal
-    versions:
-    - 4.0.8
-  - dependency-name: marked
-    versions:
-    - 2.0.1
-  - dependency-name: npm-force-resolutions
-    versions:
-    - 0.0.5
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "10:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: sunday
+      time: "10:30"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 5

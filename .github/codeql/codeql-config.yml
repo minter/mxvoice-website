@@ -1,0 +1,11 @@
+name: mxvoice-website CodeQL config
+
+paths-ignore:
+  - dist/**
+  - src/assets/vendor/**
+  - src/assets/font/**
+  - src/assets/img/**
+  - src/assets/sass/**
+  - src/assets/scss/**
+
+
