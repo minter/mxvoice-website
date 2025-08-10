@@ -3,11 +3,12 @@ const {src, dest, watch, series, parallel } = require('gulp');
 const log = require('fancy-log');
 const colors = require('ansi-colors');
 const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const bourbon = require('node-bourbon').includePaths;
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
-const del = require('del');
+const fs = require('fs');
+const path = require('path');
 const panini = require('panini');
 const uglify = require('gulp-uglify-es').default;
 const sourcemaps = require('gulp-sourcemaps');
@@ -48,8 +49,7 @@ function compileSASS() {
   return src(['src/assets/sass/bulma.sass'])
     .pipe(sass({
       outputStyle: 'compressed',
-      sourceComments: 'map',
-      sourceMap: 'sass',
+      sourceMap: true,
       includePaths: bourbon
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
@@ -63,8 +63,7 @@ function compileSCSS() {
   return src(['src/assets/scss/core_kit1.scss'])
     .pipe(sass({
       outputStyle: 'compressed',
-      sourceComments: 'map',
-      sourceMap: 'scss',
+      sourceMap: true,
       includePaths: bourbon
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
@@ -272,7 +271,19 @@ function prettyHTML() {
 // DELETE DIST FOLDER
 function cleanDist(done) {
   console.log('---------------REMOVING OLD FILES FROM DIST---------------');
-  del.sync(['dist/*', '!dist/.git', '!dist/CNAME'], {force: true});
+  if (fs.existsSync('dist')) {
+    const files = fs.readdirSync('dist');
+    files.forEach(file => {
+      if (file !== '.git' && file !== 'CNAME') {
+        const filePath = path.join('dist', file);
+        if (fs.lstatSync(filePath).isDirectory()) {
+          fs.rmSync(filePath, { recursive: true, force: true });
+        } else {
+          fs.unlinkSync(filePath);
+        }
+      }
+    });
+  }
   return done();
 }
 
