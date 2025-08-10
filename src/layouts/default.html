@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167062269-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-167062269-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-167062269-1');
-      </script>
+      gtag("config", "UA-167062269-1");
+    </script>
 
-        <!-- Required Meta Tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-        <title> Mx. Voice :: {{title}}</title>
-        <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mx. Voice - Improv Audio Software" />
+    <meta
+      property="og:description"
+      content="The software you've trusted for 20 years to make your shows amazing. Rebuilt for modern performance."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mxvoice.app" />
+    <meta
+      property="og:image"
+      content="https://mxvoice.app/assets/img/illustrations/interface/mxvoice-light.png"
+    />
+    <meta property="og:site_name" content="Mx. Voice" />
+    <meta property="og:locale" content="en_US" />
 
-        <!--Core CSS -->
-        <link rel="stylesheet" href="{{root}}assets/css/bulma.css">
-        <link rel="stylesheet" href="{{root}}assets/css/app.css">
-        <link rel="stylesheet" href="{{root}}assets/css/core_kit1.css">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mx. Voice - Improv Audio Software" />
+    <meta
+      name="twitter:description"
+      content="The software you've trusted for 20 years to make your shows amazing. Rebuilt for modern performance."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mxvoice.app/assets/img/illustrations/interface/mxvoice-light.png"
+    />
 
-    </head>
-    <body>
-        {{> pageloader}}
-        {{> body}}
-        {{> sidebar}}
-        {{> backtotop}}
-        {{> scripts}}
-    </body>
+    <title>Mx. Voice :: {{title}}</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <!--Core CSS -->
+    <link rel="stylesheet" href="{{root}}assets/css/bulma.css" />
+    <link rel="stylesheet" href="{{root}}assets/css/app.css" />
+    <link rel="stylesheet" href="{{root}}assets/css/core_kit1.css" />
+  </head>
+  <body>
+    {{> pageloader}} {{> body}} {{> sidebar}} {{> backtotop}} {{> scripts}}
+  </body>
 </html>
