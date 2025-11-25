@@ -16,7 +16,7 @@
     "url": "https://github.com/cssninjaStudio"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.3",
+    "@babel/core": "^7.28.5",
     "@babel/preset-env": "^7.28.3",
     "acorn": "^8.11.3",
     "ansi-colors": "^4.1.3",
