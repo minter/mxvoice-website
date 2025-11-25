@@ -26,7 +26,7 @@
     "braces": "^3.0.2",
     "browser-sync": "^3.0.2",
     "csscomb": "^4.3.0",
-    "del": "^8.0.0",
+    "del": "^8.0.1",
     "fancy-log": "^2.0.0",
     "gulp": "^5.0.1",
     "gulp-accessibility": "^3.1.1",
