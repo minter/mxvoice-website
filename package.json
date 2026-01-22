@@ -55,7 +55,7 @@
     "npm-force-resolutions": "0.0.10",
     "panini": "^1.7.1",
     "run-sequence": "^2.2.1",
-    "sass": "^1.94.2",
+    "sass": "^1.97.3",
     "zoom-vanilla.js": "^2.0.6"
   },
   "dependencies": {
