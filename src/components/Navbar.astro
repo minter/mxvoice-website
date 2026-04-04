@@ -1,0 +1,42 @@
+---
+import logoLight from '../assets/img/logos/mxvoice-logo-white-text.png';
+import logoDark from '../assets/img/logos/mxvoice-logo.png';
+---
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="/" class="navbar-brand">
+      <img class="logo-light" src={logoLight.src} alt="Mx. Voice" />
+      <img class="logo-dark" src={logoDark.src} alt="Mx. Voice" />
+    </a>
+
+    <button class="navbar-burger" id="navbar-burger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="navbar-links" id="navbar-links">
+      <a href="https://download.mxvoice.app/download/exe">Download Windows</a>
+      <a href="https://download.mxvoice.app/download/dmg">Download OS X</a>
+      <a href="https://github.com/minter/mxvoice-electron/releases">All Releases</a>
+      <a href="/docs/getting-started/">Documentation</a>
+      <a href="https://github.com/minter/mxvoice-electron" class="navbar-cta">Get Source</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar?.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile toggle
+  const burger = document.getElementById('navbar-burger');
+  const links = document.getElementById('navbar-links');
+  burger?.addEventListener('click', () => {
+    links?.classList.toggle('open');
+  });
+</script>

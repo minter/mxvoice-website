@@ -1,0 +1,160 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+import heroImage from '../assets/img/illustrations/mxvoice-light.png';
+import searchImage from '../assets/img/illustrations/interface-search-box.png';
+import hotkeysImage from '../assets/img/illustrations/interface-hotkeys.png';
+import playboxImage from '../assets/img/illustrations/interface-playbox.png';
+import cszLogo from '../assets/img/logos/comedysportz.png';
+---
+
+<Base title="Improv Audio Software">
+  <Navbar />
+
+  <!-- Hero -->
+  <div class="hero hero-landing">
+    <div class="container">
+      <div class="columns">
+        <div class="col-5">
+          <h1>Mx. Voice</h1>
+          <h2>The software you've trusted for 20 years to make your shows amazing. Rebuilt.</h2>
+          <a href="#about" class="btn btn-outline-light">Get Started</a>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-6">
+          <img src={heroImage.src} alt="Mx. Voice application screenshot" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 1: Sound Made Simple -->
+  <div class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-number">1</div>
+        <h2>Sound Made Simple</h2>
+        <p>Discover a seamless experience in show audio</p>
+      </div>
+
+      <div class="icon-grid">
+        <div class="icon-box">
+          <div>&#128193;</div>
+          <h3>Organize</h3>
+          <p>Sort audio by category, title, artist, and tags. Add audio by individual files or in bulk</p>
+        </div>
+        <div class="icon-box">
+          <div>&#128269;</div>
+          <h3>Search</h3>
+          <p>Search by category, title, artist, or tags. Find what you want &mdash; fast.</p>
+        </div>
+        <div class="icon-box">
+          <div>&#9654;</div>
+          <h3>Play</h3>
+          <p>Auto-play a playlist out of the holding tank. Drag songs to hotkeys for quick access. Or search and play!</p>
+        </div>
+        <div class="icon-box">
+          <div>&#127911;</div>
+          <h3>React</h3>
+          <p>Astound your audience by finding the perfect sound clip at the right time. Battle-tested in ComedySportz clubs worldwide!</p>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <a href="https://download.mxvoice.app/download/exe" class="btn btn-primary">Download Windows</a>
+        <a href="https://download.mxvoice.app/download/dmg" class="btn btn-primary">Download OS X</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Built For Improv Shows -->
+  <div class="section section-grey">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-number">2</div>
+        <h2>Built For Improv Shows</h2>
+        <p>Over 20 years of service to taking improv sound to the next level</p>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-text">
+          <h3>Powerful search</h3>
+          <div class="divider"></div>
+          <p>In the middle of an improv show, you need to find the perfect sound cue quickly. Mx. Voice is built with that in mind, and trusted by improv sound folks worldwide.</p>
+        </div>
+        <div class="feature-img">
+          <img src={searchImage.src} alt="Mx. Voice search interface" />
+        </div>
+      </div>
+
+      <div class="feature-row reverse">
+        <div class="feature-text">
+          <h3>Fast Access</h3>
+          <div class="divider"></div>
+          <p>Mx. Voice is designed to let you search, find, and play your audio as fast as possible. Don't let the moment pass because you're looking for where you put that sound cue!</p>
+        </div>
+        <div class="feature-img">
+          <img src={hotkeysImage.src} alt="Mx. Voice hotkeys interface" />
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-text">
+          <h3>Let The Audience Hear It</h3>
+          <div class="divider"></div>
+          <p>Quickly play, fade, and stop your audio, all the while knowing exactly what's going on.</p>
+        </div>
+        <div class="feature-img">
+          <img src={playboxImage.src} alt="Mx. Voice playback controls" />
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <a href="https://download.mxvoice.app/download/exe" class="btn btn-primary">Download Windows</a>
+        <a href="https://download.mxvoice.app/download/dmg" class="btn btn-primary">Download OS X</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Testimonials -->
+  <div class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-number">3</div>
+        <h2>20 Years Of User Love</h2>
+        <p>From our first release in 2000 to a new era in 2020, we've been making life easier for people</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src={cszLogo.src} alt="ComedySportz" />
+          <div>
+            <h3>Mike Topel</h3>
+            <span>ComedySportz Austin</span>
+          </div>
+        </div>
+        <p>We were using Mr Voice and I became as familiar as I could with its interface and application. Designed my own tweaks and workarounds. This new application, Mx Voice, is a big jump in features, usability, flexibility, and enjoyability. It brings music player, search, multiple tabs for holding tanks and hotkeys under one umbrella in a clean, self-contained desktop app. Very happy to reduce my myriad windows down to one interface. It even has a fadeout feature, reducing the reliance on external mixers. Great job!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: Free & Open Source -->
+  <div class="section section-grey">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-number">4</div>
+        <h2>It's Free and Open Source</h2>
+        <p>Mx. Voice is Free Software. Download it for Windows or macOS, or contribute to the source code on GitHub</p>
+      </div>
+      <div class="btn-group">
+        <a href="https://download.mxvoice.app/download/exe" class="btn btn-primary">Download Windows</a>
+        <a href="https://download.mxvoice.app/download/dmg" class="btn btn-primary">Download OS X</a>
+        <a href="https://github.com/minter/mxvoice-electron" class="btn btn-primary">Get Source</a>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</Base>

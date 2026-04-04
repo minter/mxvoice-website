@@ -1,0 +1,35 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const pages = [
+  { href: '/docs/getting-started/', label: 'Getting Started' },
+  { href: '/docs/hotkeys/', label: 'Hotkeys' },
+  { href: '/docs/holding-tank/', label: 'Holding Tank' },
+  { href: '/docs/managing-songs/', label: 'Managing Songs' },
+  { href: '/docs/search/', label: 'Search' },
+  { href: '/docs/playback/', label: 'Playback Controls' },
+  { href: '/docs/profiles/', label: 'Profiles' },
+  { href: '/docs/backups/', label: 'Backups' },
+  { href: '/docs/preferences/', label: 'Preferences' },
+  { href: '/docs/library-transfer/', label: 'Moving to a New Machine' },
+  { href: '/docs/updating/', label: 'Updating the App' },
+  { href: '/docs/troubleshooting/', label: 'Troubleshooting' },
+];
+---
+
+<nav class="docs-sidebar">
+  <p class="docs-sidebar-title">Documentation</p>
+  <ul>
+    {pages.map(({ href, label }) => (
+      <li>
+        <a href={href} class:list={[{ active: currentPath === href || currentPath === href.slice(0, -1) }]}>
+          {label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

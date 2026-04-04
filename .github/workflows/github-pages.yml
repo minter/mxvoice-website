@@ -32,10 +32,6 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Include CNAME if present
-        if: hashFiles('CNAME') != ''
-        run: cp CNAME dist/CNAME
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
