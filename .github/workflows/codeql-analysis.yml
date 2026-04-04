@@ -63,5 +63,5 @@ jobs:
     # (Not required for JavaScript/TypeScript repositories.)
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v5
+      uses: github/codeql-action/analyze@v4
 
