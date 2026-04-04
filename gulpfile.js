@@ -20,7 +20,6 @@ const htmllint = require('gulp-htmllint');
 const jshint = require('gulp-jshint');
 const htmlreplace = require('gulp-html-replace');
 const newer = require('gulp-newer');
-const accessibility = require('gulp-accessibility');
 const babel = require('gulp-babel');
 const nodepath = 'node_modules/';
 const assetspath = 'assets/';
@@ -303,27 +302,8 @@ function cleanDist(done) {
   return done();
 }
 
-// ACCESSIBILITY CHECK
-function HTMLAccessibility() {
-  return src('dist/*.html')
-    .pipe(accessibility({
-      force: true
-    }))
-    .on('error', console.log)
-    .pipe(accessibility.report({
-      reportType: 'txt'
-    }))
-    .pipe(rename({
-      extname: '.txt'
-    }))
-    .pipe(dest('accessibility-reports'));
-}
-
 // RUN ALL LINTERS
 exports.linters = series(htmlLint, scssLint, jsLint);
-
-// RUN ACCESSIILITY CHECK
-exports.accessibility = HTMLAccessibility;
 
 //SETUP
 exports.setup = series(setupBulma);
