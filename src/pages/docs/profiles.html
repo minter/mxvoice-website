@@ -1,0 +1,123 @@
+---
+layout: default
+title: Profiles
+---
+
+<!-- Hero and nav -->
+<div class="hero is-relative is-theme-secondary">
+
+    {{> navbar-fade}}
+
+    <!-- Hero caption -->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h1 class="landing-title">Profiles</h1>
+                    <h2 class="subtitle is-5 light-text">
+                        Separate configurations for different shows, venues, or performers
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Docs content -->
+<div class="section is-medium">
+    <div class="container">
+        <div class="columns">
+
+            <!-- Sidebar navigation -->
+            <div class="column is-3">
+                {{> docs-sidebar}}
+            </div>
+
+            <!-- Main content -->
+            <div class="column is-8 is-offset-1">
+                <div class="docs-content">
+
+                    <h2 id="overview" class="docs-heading">Overview</h2>
+
+                    <p>Profiles let you maintain completely separate setups within Mx. Voice. Each profile has its own hotkey assignments, holding tank lists, and display preferences. This is useful when multiple performers share a computer, or when you want different configurations for different shows or venues.</p>
+
+                    <h2 id="launcher" class="docs-heading">The Profile Launcher</h2>
+
+                    <p>When you start Mx. Voice, the Profile Launcher appears. It shows a list of all available profiles. Select one and click <strong>Choose Profile</strong>, or double-click a profile to launch it directly.</p>
+
+                    <p>You can search for profiles by name or description using the search field in the launcher.</p>
+
+                    <h2 id="default-profile" class="docs-heading">Default Profile</h2>
+
+                    <p>On first launch, a <strong>Default User</strong> profile is created automatically. It appears at the top of the profile list and cannot be deleted. If you only need one configuration, you can use this profile for everything.</p>
+
+                    <h2 id="creating" class="docs-heading">Creating a Profile</h2>
+
+                    <ol>
+                        <li>Click <strong>+ New Profile</strong> in the launcher header.</li>
+                        <li>Enter a <strong>Profile Name</strong> (required, up to 50 characters). Letters, numbers, spaces, hyphens, and underscores are allowed.</li>
+                        <li>Optionally enter a <strong>Description</strong> (e.g., "Friday night show at Club XYZ").</li>
+                        <li>Click <strong>Create Profile</strong>.</li>
+                    </ol>
+
+                    <p>New profiles start with default preferences and empty hotkey and holding tank tabs. Profile names must be unique.</p>
+
+                    <h2 id="switching" class="docs-heading">Switching Profiles</h2>
+
+                    <p>To switch to a different profile, go to <strong>View &rarr; Switch Profile</strong> in the menu bar. The main window closes and the Profile Launcher reappears so you can select a different profile.</p>
+
+                    <h2 id="deleting" class="docs-heading">Deleting a Profile</h2>
+
+                    <p>Click the delete button next to a profile in the launcher. The Default User profile and the last remaining profile cannot be deleted.</p>
+
+                    <div class="docs-callout">
+                        <strong>Warning:</strong> Deleting a profile permanently removes all of its hotkey assignments, holding tank lists, and preferences. Your song database and audio files are not affected.
+                    </div>
+
+                    <h2 id="what-is-isolated" class="docs-heading">What's Isolated per Profile</h2>
+
+                    <p>Each profile maintains its own:</p>
+
+                    <ul>
+                        <li><strong>Hotkey assignments</strong> (all 5 tabs, F1&ndash;F12 each)</li>
+                        <li><strong>Holding tank lists</strong> (all 5 tabs)</li>
+                        <li><strong>Display preferences</strong> &mdash; screen mode (light/dark/auto), fade-out duration, column order</li>
+                        <li><strong>Window state</strong> &mdash; window size and position</li>
+                    </ul>
+
+                    <h2 id="what-is-shared" class="docs-heading">What's Shared Across Profiles</h2>
+
+                    <p>All profiles share:</p>
+
+                    <ul>
+                        <li><strong>Song database</strong> &mdash; all profiles search the same library of songs. Adding or removing songs affects all profiles.</li>
+                        <li><strong>Directory settings</strong> &mdash; audio files directory, database location, and hotkey/holding tank file directory.</li>
+                        <li><strong>Debug logging</strong> &mdash; the logging toggle is global.</li>
+                    </ul>
+
+                    <h2 id="file-storage" class="docs-heading">Where Profiles Are Stored</h2>
+
+                    <p>Profile data is stored in your system's application data directory:</p>
+
+                    <table class="table is-bordered is-striped is-fullwidth docs-table">
+                        <thead>
+                            <tr>
+                                <th>Platform</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>macOS</strong></td><td><code>~/Library/Application Support/Mx. Voice/</code></td></tr>
+                            <tr><td><strong>Windows</strong></td><td><code>%APPDATA%\Mx. Voice\</code></td></tr>
+                            <tr><td><strong>Linux</strong></td><td><code>~/.config/Mx. Voice/</code></td></tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{> footer-dark}}

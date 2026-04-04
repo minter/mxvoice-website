@@ -1,0 +1,134 @@
+/*! _pages-docs.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Documentation pages styles
+========================================================================== */
+
+/* Sidebar */
+.docs-sidebar {
+    position: sticky;
+    top: 100px;
+
+    .docs-sidebar-title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $muted-grey;
+        margin-bottom: 0.75rem;
+    }
+
+    .docs-sidebar-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 0.25rem;
+        }
+
+        a {
+            display: block;
+            padding: 0.4rem 0.75rem;
+            color: $blue-grey;
+            border-left: 3px solid transparent;
+            border-radius: 0 4px 4px 0;
+            transition: all 0.3s;
+            &:hover {
+                color: $secondary;
+                background: lighten($fade-grey, 2%);
+            }
+
+            &.is-active {
+                color: $secondary;
+                border-left-color: $secondary;
+                font-weight: 600;
+                background: lighten($fade-grey, 2%);
+            }
+        }
+    }
+}
+
+/* Content area */
+.docs-content {
+    max-width: 720px;
+
+    p {
+        line-height: 1.8;
+        color: $blue-grey;
+        margin-bottom: 1.25rem;
+    }
+
+    ol, ul {
+        margin-bottom: 1.25rem;
+        padding-left: 1.5rem;
+
+        li {
+            line-height: 1.8;
+            color: $blue-grey;
+            margin-bottom: 0.35rem;
+        }
+    }
+}
+
+/* Headings */
+.docs-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $blue-grey;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $fade-grey;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.docs-subheading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $blue-grey;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Callout boxes */
+.docs-callout {
+    background: lighten($fade-grey, 2%);
+    border-left: 4px solid $secondary;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 6px 6px 0;
+
+    strong {
+        color: $blue-grey;
+    }
+
+    ul {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+    }
+}
+
+/* Tables */
+.docs-table {
+    margin-bottom: 1.5rem;
+
+    th {
+        background: lighten($fade-grey, 2%);
+        font-weight: 600;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .docs-sidebar {
+        position: relative;
+        top: 0;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $fade-grey;
+    }
+}

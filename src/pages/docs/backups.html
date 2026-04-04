@@ -1,0 +1,145 @@
+---
+layout: default
+title: Backups
+---
+
+<!-- Hero and nav -->
+<div class="hero is-relative is-theme-secondary">
+
+    {{> navbar-fade}}
+
+    <!-- Hero caption -->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h1 class="landing-title">Backups</h1>
+                    <h2 class="subtitle is-5 light-text">
+                        Automatic and manual backups of your profile data
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Docs content -->
+<div class="section is-medium">
+    <div class="container">
+        <div class="columns">
+
+            <!-- Sidebar navigation -->
+            <div class="column is-3">
+                {{> docs-sidebar}}
+            </div>
+
+            <!-- Main content -->
+            <div class="column is-8 is-offset-1">
+                <div class="docs-content">
+
+                    <h2 id="overview" class="docs-heading">Overview</h2>
+
+                    <p>Mx. Voice automatically backs up your profile data at regular intervals. Each backup is a complete snapshot of your profile, including hotkey assignments, holding tank lists, and preferences. You can also create backups manually and restore from any previous backup.</p>
+
+                    <p>All backup features are accessed from the <strong>Profile</strong> menu.</p>
+
+                    <h2 id="automatic-backups" class="docs-heading">Automatic Backups</h2>
+
+                    <p>By default, Mx. Voice creates a backup every 30 minutes &mdash; but only if your profile has actually changed since the last backup. This keeps your backup history meaningful without creating unnecessary duplicates.</p>
+
+                    <p>Automatic backups are enabled by default. You can configure the interval, retention limits, or disable them entirely in <a href="#settings">Backup Settings</a>.</p>
+
+                    <h2 id="create-backup" class="docs-heading">Creating a Manual Backup</h2>
+
+                    <ol>
+                        <li>Go to <strong>Profile &rarr; Create Backup Now</strong>.</li>
+                        <li>Your current profile state is saved immediately.</li>
+                        <li>A confirmation message appears when the backup is complete.</li>
+                    </ol>
+
+                    <p>Manual backups are useful before making major changes to your hotkey setup or holding tank configuration.</p>
+
+                    <h2 id="restore" class="docs-heading">Restoring from a Backup</h2>
+
+                    <ol>
+                        <li>Go to <strong>Profile &rarr; Restore from Backup...</strong></li>
+                        <li>A dialog shows all available backups, sorted newest first. Each backup shows:
+                            <ul>
+                                <li>Date and time</li>
+                                <li>Type badge &mdash; <strong>Manual</strong>, <strong>Auto</strong>, or <strong>Pre-restore</strong></li>
+                                <li>Size and file count</li>
+                            </ul>
+                        </li>
+                        <li>Click <strong>Restore</strong> next to the backup you want.</li>
+                        <li>Confirm the restore in the dialog.</li>
+                        <li>The application reloads with the restored profile data.</li>
+                    </ol>
+
+                    <div class="docs-callout">
+                        <strong>Safety net:</strong> Before any restore, Mx. Voice automatically creates a "pre-restore" backup of your current profile. If you don't like the result, you can restore from the pre-restore backup to get back to where you were.
+                    </div>
+
+                    <h2 id="settings" class="docs-heading">Backup Settings</h2>
+
+                    <p>Go to <strong>Profile &rarr; Backup Settings...</strong> to configure automatic backups.</p>
+
+                    <table class="table is-bordered is-striped is-fullwidth docs-table">
+                        <thead>
+                            <tr>
+                                <th>Setting</th>
+                                <th>Options</th>
+                                <th>Default</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Enable automatic backups</strong></td>
+                                <td>On / Off</td>
+                                <td>On</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Backup interval</strong></td>
+                                <td>15 min, 30 min, 1 hour, 2 hours, 6 hours, 12 hours, 24 hours</td>
+                                <td>30 minutes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Maximum backups to keep</strong></td>
+                                <td>1&ndash;100</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Maximum backup age</strong></td>
+                                <td>7 days, 14 days, 30 days, 60 days, 90 days, or Never delete</td>
+                                <td>30 days</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>When both the count and age limits are reached, the oldest backups are removed first. Setting age to "Never delete" means only the count limit applies.</p>
+
+                    <h2 id="what-is-backed-up" class="docs-heading">What Gets Backed Up</h2>
+
+                    <p>Each backup is a complete snapshot of your profile directory, including:</p>
+
+                    <ul>
+                        <li>Hotkey assignments (all 5 tabs)</li>
+                        <li>Holding tank lists (all 5 tabs)</li>
+                        <li>Tab names</li>
+                        <li>Profile-specific preferences</li>
+                        <li>UI state (playback settings, layout)</li>
+                    </ul>
+
+                    <p>Backups do <strong>not</strong> include the song database or audio files. Those are shared across all profiles and are best protected using the <a href="/docs/library-transfer.html">Library Export</a> feature.</p>
+
+                    <h2 id="storage" class="docs-heading">Where Backups Are Stored</h2>
+
+                    <p>Backups are stored in your application data directory under <code>profile-backups/</code>, organized by profile name. Each backup is a timestamped folder. Mx. Voice manages cleanup automatically based on your retention settings.</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{> footer-dark}}

@@ -1,0 +1,133 @@
+---
+layout: default
+title: Holding Tank
+---
+
+<!-- Hero and nav -->
+<div class="hero is-relative is-theme-secondary">
+
+    {{> navbar-fade}}
+
+    <!-- Hero caption -->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h1 class="landing-title">Holding Tank</h1>
+                    <h2 class="subtitle is-5 light-text">
+                        Stage songs for quick access or automatic playlist playback
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Docs content -->
+<div class="section is-medium">
+    <div class="container">
+        <div class="columns">
+
+            <!-- Sidebar navigation -->
+            <div class="column is-3">
+                {{> docs-sidebar}}
+            </div>
+
+            <!-- Main content -->
+            <div class="column is-8 is-offset-1">
+                <div class="docs-content">
+
+                    <h2 id="overview" class="docs-heading">Overview</h2>
+
+                    <p>The Holding Tank is on the left side of the Mx. Voice window. It's a staging area where you can collect songs for a show. It operates in two modes: <strong>Storage</strong> for individual access, or <strong>Playlist</strong> for automatic sequential playback.</p>
+
+                    <h2 id="modes" class="docs-heading">Storage vs. Playlist Mode</h2>
+
+                    <p>Use the two mode buttons in the holding tank header to switch between modes.</p>
+
+                    <table class="table is-bordered is-striped is-fullwidth docs-table">
+                        <thead>
+                            <tr>
+                                <th>Mode</th>
+                                <th>Behavior</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Storage</strong> (default)</td>
+                                <td>Songs are played individually. Click a song to select it, double-click to play. Playback stops at the end of each song.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Playlist</strong></td>
+                                <td>Songs play automatically in sequence. When one song ends, the next starts. A speaker icon indicates the currently playing track.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 id="adding-songs" class="docs-heading">Adding Songs</h2>
+
+                    <ul>
+                        <li><strong>Drag and drop</strong> &mdash; Drag a song from the search results into the holding tank list.</li>
+                        <li><strong>Shift+Tab</strong> &mdash; Select a song in the search results and press <strong>Shift+Tab</strong> to add it to the holding tank.</li>
+                    </ul>
+
+                    <p>Songs can be reordered by dragging them within the holding tank list.</p>
+
+                    <h2 id="tabs" class="docs-heading">Tabs</h2>
+
+                    <p>Like hotkeys, the holding tank has <strong>5 tabs</strong> for organizing different groups of songs. Each tab maintains its own song list independently.</p>
+
+                    <ul>
+                        <li><strong>Switch tabs</strong> by clicking the tab numbers (1&ndash;5).</li>
+                        <li><strong>Rename a tab</strong> by clicking the pencil icon in the header.</li>
+                    </ul>
+
+                    <h2 id="removing" class="docs-heading">Removing Songs</h2>
+
+                    <ul>
+                        <li><strong>Remove one</strong> &mdash; Select a song and press <strong>Delete</strong> to remove it from the list.</li>
+                        <li><strong>Clear all</strong> &mdash; Click the trash icon in the header to empty the current tab. A confirmation dialog appears first.</li>
+                    </ul>
+
+                    <h2 id="import-export" class="docs-heading">Importing and Exporting</h2>
+
+                    <p>Save and load holding tank lists as <strong>.hld files</strong>. This is useful for preparing setlists in advance.</p>
+
+                    <ul>
+                        <li><strong>Export</strong> &mdash; Click the save icon to save the current tab's song list.</li>
+                        <li><strong>Import</strong> &mdash; Click the folder icon to load a saved .hld file into the current tab.</li>
+                    </ul>
+
+                    <h2 id="right-click" class="docs-heading">Right-Click Menu</h2>
+
+                    <p>Right-click on any song in the holding tank to see a context menu with these options:</p>
+
+                    <ul>
+                        <li><strong>Play</strong> &mdash; Play the song.</li>
+                        <li><strong>Edit</strong> &mdash; Edit the song's metadata.</li>
+                        <li><strong>Remove from Holding Tank</strong> &mdash; Remove the song from the list without deleting it from your library.</li>
+                    </ul>
+
+                    <h2 id="shortcuts" class="docs-heading">Keyboard Shortcuts</h2>
+
+                    <table class="table is-bordered is-striped is-fullwidth docs-table">
+                        <thead>
+                            <tr>
+                                <th>Shortcut</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Shift+Tab</strong></td><td>Add selected song to the holding tank</td></tr>
+                            <tr><td><strong>Delete</strong></td><td>Remove selected song from the holding tank</td></tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{> footer-dark}}

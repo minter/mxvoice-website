@@ -1,0 +1,140 @@
+---
+layout: default
+title: Managing Songs
+---
+
+<!-- Hero and nav -->
+<div class="hero is-relative is-theme-secondary">
+
+    {{> navbar-fade}}
+
+    <!-- Hero caption -->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h1 class="landing-title">Managing Songs</h1>
+                    <h2 class="subtitle is-5 light-text">
+                        Add, organize, and manage your audio library
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Docs content -->
+<div class="section is-medium">
+    <div class="container">
+        <div class="columns">
+
+            <!-- Sidebar navigation -->
+            <div class="column is-3">
+                {{> docs-sidebar}}
+            </div>
+
+            <!-- Main content -->
+            <div class="column is-8 is-offset-1">
+                <div class="docs-content">
+
+                    <h2 id="supported-formats" class="docs-heading">Supported Audio Formats</h2>
+
+                    <p>Mx. Voice supports the following audio formats:</p>
+
+                    <ul>
+                        <li>MP3 (.mp3)</li>
+                        <li>WAV (.wav)</li>
+                        <li>OGG (.ogg)</li>
+                        <li>FLAC (.flac)</li>
+                        <li>M4A (.m4a)</li>
+                        <li>MP4 (.mp4)</li>
+                        <li>AAC (.aac)</li>
+                    </ul>
+
+                    <h2 id="adding-songs" class="docs-heading">Adding a Single Song</h2>
+
+                    <ol>
+                        <li>Open the <strong>Add New Song</strong> dialog.</li>
+                        <li>Select an audio file from your computer.</li>
+                        <li>Fill in the metadata:
+                            <ul>
+                                <li><strong>Title</strong> (required) &mdash; auto-populated from the file's metadata if available, otherwise from the filename.</li>
+                                <li><strong>Artist</strong> &mdash; auto-populated from metadata.</li>
+                                <li><strong>Category</strong> (required) &mdash; select from existing categories or create a new one.</li>
+                                <li><strong>Info</strong> &mdash; optional notes or tags.</li>
+                                <li><strong>Duration</strong> &mdash; automatically calculated (read-only).</li>
+                            </ul>
+                        </li>
+                        <li>Click <strong>Add</strong> to save the song to your library.</li>
+                    </ol>
+
+                    <p>The audio file is copied into your configured audio files directory with a unique filename to prevent conflicts.</p>
+
+                    <h2 id="bulk-import" class="docs-heading">Bulk Import</h2>
+
+                    <p>The fastest way to build your library. Import an entire directory of audio files at once.</p>
+
+                    <ol>
+                        <li>Open the <strong>Bulk Add</strong> dialog.</li>
+                        <li>Choose a <strong>source directory</strong> containing your audio files.</li>
+                        <li>Select a <strong>category</strong> for all imported songs (or create a new one).</li>
+                        <li>Click <strong>Add Songs</strong>.</li>
+                    </ol>
+
+                    <p>Mx. Voice scans the directory recursively (including subfolders) and for each audio file:</p>
+
+                    <ul>
+                        <li>Extracts metadata (title, artist, duration) from the file.</li>
+                        <li>Creates a database entry.</li>
+                        <li>Copies the file to your audio files directory.</li>
+                    </ul>
+
+                    <h2 id="editing" class="docs-heading">Editing Song Metadata</h2>
+
+                    <ol>
+                        <li>Select a song in the search results.</li>
+                        <li>Open the edit dialog (double-click or use the edit action).</li>
+                        <li>Update the <strong>Title</strong>, <strong>Artist</strong>, <strong>Category</strong>, or <strong>Info</strong> fields.</li>
+                        <li>Click <strong>Save</strong>. The search results refresh automatically.</li>
+                    </ol>
+
+                    <p>Duration cannot be edited &mdash; it's always calculated from the audio file.</p>
+
+                    <h2 id="deleting" class="docs-heading">Deleting Songs</h2>
+
+                    <ol>
+                        <li>Select a song in the search results.</li>
+                        <li>Press <strong>Delete</strong>.</li>
+                        <li>Confirm the deletion in the dialog.</li>
+                    </ol>
+
+                    <p>Deleting a song removes it from the database and deletes the audio file from your music directory. The song is also removed from any hotkey or holding tank assignments.</p>
+
+                    <h2 id="categories" class="docs-heading">Managing Categories</h2>
+
+                    <p>Categories help you organize your audio library. Each category has a short code (up to 4 uppercase letters) and a description.</p>
+
+                    <h3 class="docs-subheading">Creating a Category</h3>
+
+                    <ol>
+                        <li>Open the <strong>Category Management</strong> dialog.</li>
+                        <li>Enter a description (e.g., "Sound Effects").</li>
+                        <li>Click <strong>Add</strong>. A 4-letter code is auto-generated (e.g., "SOUN").</li>
+                    </ol>
+
+                    <h3 class="docs-subheading">Editing a Category</h3>
+
+                    <p>In the Category Management dialog, edit any category's description inline and click <strong>Save Changes</strong>.</p>
+
+                    <h3 class="docs-subheading">Deleting a Category</h3>
+
+                    <p>Click the delete button next to a category. All songs in that category are automatically reassigned to an "Uncategorized" category.</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{> footer-dark}}

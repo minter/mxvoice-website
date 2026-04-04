@@ -1,0 +1,125 @@
+---
+layout: default
+title: Hotkeys
+---
+
+<!-- Hero and nav -->
+<div class="hero is-relative is-theme-secondary">
+
+    {{> navbar-fade}}
+
+    <!-- Hero caption -->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h1 class="landing-title">Hotkeys</h1>
+                    <h2 class="subtitle is-5 light-text">
+                        Assign songs to function keys for instant playback
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Docs content -->
+<div class="section is-medium">
+    <div class="container">
+        <div class="columns">
+
+            <!-- Sidebar navigation -->
+            <div class="column is-3">
+                {{> docs-sidebar}}
+            </div>
+
+            <!-- Main content -->
+            <div class="column is-8 is-offset-1">
+                <div class="docs-content">
+
+                    <h2 id="overview" class="docs-heading">Overview</h2>
+
+                    <p>The Hotkeys panel is on the right side of the Mx. Voice window. It lets you assign songs to the F1 through F12 function keys for instant one-key playback during a show. You get <strong>5 tabs</strong> of hotkey sets, so you can prepare up to 60 songs for quick access.</p>
+
+                    <h2 id="assigning" class="docs-heading">Assigning Songs to Hotkeys</h2>
+
+                    <p>There are two ways to assign a song to a hotkey:</p>
+
+                    <ul>
+                        <li><strong>Drag and drop</strong> &mdash; Drag a song from the search results and drop it onto any F-key button (F1&ndash;F12).</li>
+                        <li><strong>Tab key</strong> &mdash; Select a song in the search results and press <strong>Tab</strong>. The song is assigned to the first empty hotkey slot.</li>
+                    </ul>
+
+                    <p>If you drag a song onto a hotkey that's already occupied, the new song replaces the old one. If the song you're dragging is already assigned to a different hotkey, the two assignments swap.</p>
+
+                    <h2 id="playing" class="docs-heading">Playing Hotkeys</h2>
+
+                    <p>Once a song is assigned, you can play it instantly:</p>
+
+                    <ul>
+                        <li>Press the corresponding <strong>F1&ndash;F12</strong> key on your keyboard.</li>
+                        <li><strong>Double-click</strong> the hotkey button in the panel.</li>
+                    </ul>
+
+                    <h2 id="tabs" class="docs-heading">Hotkey Tabs</h2>
+
+                    <p>There are 5 numbered tabs at the top of the hotkeys panel. Each tab holds a separate set of 12 hotkey assignments, giving you up to 60 hotkeys total.</p>
+
+                    <ul>
+                        <li><strong>Switch tabs</strong> by clicking the tab numbers (1&ndash;5).</li>
+                        <li><strong>Rename a tab</strong> by clicking the pencil icon in the header. Give each tab a descriptive name like "Intro", "Halftime", or "Endings".</li>
+                    </ul>
+
+                    <h2 id="removing" class="docs-heading">Removing Hotkeys</h2>
+
+                    <ul>
+                        <li><strong>Remove one</strong> &mdash; Select a hotkey and press <strong>Delete</strong> or <strong>Backspace</strong>.</li>
+                        <li><strong>Clear all</strong> &mdash; Click the trash icon in the hotkeys header to clear every assignment in the current tab.</li>
+                    </ul>
+
+                    <h2 id="import-export" class="docs-heading">Importing and Exporting</h2>
+
+                    <p>You can save and load hotkey configurations as <strong>.mrv files</strong>, making it easy to prepare setups in advance or share them between profiles.</p>
+
+                    <ul>
+                        <li><strong>Export</strong> &mdash; Click the save icon in the header to save the current tab's hotkey set to a .mrv file.</li>
+                        <li><strong>Import</strong> &mdash; Click the folder icon in the header to load a previously saved .mrv file into the current tab.</li>
+                    </ul>
+
+                    <h2 id="right-click" class="docs-heading">Right-Click Menu</h2>
+
+                    <p>Right-click on any hotkey assignment to see a context menu with these options:</p>
+
+                    <ul>
+                        <li><strong>Play</strong> &mdash; Play the assigned song.</li>
+                        <li><strong>Edit</strong> &mdash; Edit the song's metadata.</li>
+                        <li><strong>Remove from Hotkey</strong> &mdash; Remove the assignment without deleting the song from your library.</li>
+                    </ul>
+
+                    <h2 id="shortcuts" class="docs-heading">Keyboard Shortcuts</h2>
+
+                    <table class="table is-bordered is-striped is-fullwidth docs-table">
+                        <thead>
+                            <tr>
+                                <th>Shortcut</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>F1&ndash;F12</strong></td><td>Play the assigned song</td></tr>
+                            <tr><td><strong>Tab</strong></td><td>Assign selected song to the first empty slot</td></tr>
+                            <tr><td><strong>Delete / Backspace</strong></td><td>Remove the selected hotkey assignment</td></tr>
+                            <tr><td><strong>Cmd/Ctrl+1&ndash;5</strong></td><td>Switch to hotkey tab 1&ndash;5</td></tr>
+                            <tr><td><strong>Cmd/Ctrl+O</strong></td><td>Open a hotkeys file</td></tr>
+                            <tr><td><strong>Cmd/Ctrl+S</strong></td><td>Save hotkeys to a file</td></tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{> footer-dark}}
