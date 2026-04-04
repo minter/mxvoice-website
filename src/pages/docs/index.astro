@@ -1,0 +1,120 @@
+---
+import Base from '../../layouts/Base.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import DocsSidebar from '../../components/DocsSidebar.astro';
+
+const sections = [
+  {
+    title: 'Getting Started',
+    items: [
+      { href: '/docs/getting-started/', label: 'Getting Started', description: 'Download, install, and set up Mx. Voice for the first time.' },
+      { href: '/docs/profiles/', label: 'Profiles', description: 'Separate configurations for different shows, venues, or performers.' },
+      { href: '/docs/preferences/', label: 'Preferences', description: 'Configure directories, audio, appearance, and more.' },
+    ],
+  },
+  {
+    title: 'Using Mx. Voice',
+    items: [
+      { href: '/docs/managing-songs/', label: 'Managing Songs', description: 'Add, import, edit, and organize your audio library.' },
+      { href: '/docs/search/', label: 'Search', description: 'Find the right song fast with omni search, category filters, and advanced search.' },
+      { href: '/docs/playback/', label: 'Playback Controls', description: 'Play, pause, stop, fade out, loop, and control volume.' },
+      { href: '/docs/hotkeys/', label: 'Hotkeys', description: 'Assign songs to F1–F12 for instant one-key playback.' },
+      { href: '/docs/holding-tank/', label: 'Holding Tank', description: 'Stage songs for quick access or automatic playlist playback.' },
+    ],
+  },
+  {
+    title: 'Maintenance',
+    items: [
+      { href: '/docs/backups/', label: 'Backups', description: 'Automatic and manual backups of your profile data.' },
+      { href: '/docs/library-transfer/', label: 'Moving to a New Machine', description: 'Transfer your entire setup with a single .mxvlib file.' },
+      { href: '/docs/updating/', label: 'Updating the App', description: 'Auto-updates on macOS and Windows, manual downloads for Linux.' },
+      { href: '/docs/troubleshooting/', label: 'Troubleshooting', description: 'Solutions to common issues and how to get help.' },
+    ],
+  },
+];
+---
+
+<Base title="Documentation">
+  <Navbar />
+
+  <div class="hero hero-docs">
+    <div class="container text-center">
+      <h1>Documentation</h1>
+      <h2>Everything you need to know about Mx. Voice</h2>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="docs-layout">
+        <DocsSidebar currentPath="/docs/" />
+        <div class="docs-content">
+
+          {sections.map((section) => (
+            <h2>{section.title}</h2>
+            <div class="docs-index-grid">
+              {section.items.map((item) => (
+                <a href={item.href} class="docs-index-card">
+                  <h3>{item.label}</h3>
+                  <p>{item.description}</p>
+                </a>
+              ))}
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</Base>
+
+<style>
+  .docs-index-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .docs-index-card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+  }
+
+  .docs-index-card:hover {
+    border-color: #7f00ff;
+    box-shadow: 0 2px 12px rgba(127, 0, 255, 0.08);
+    text-decoration: none;
+  }
+
+  .docs-index-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #444f60;
+    margin-bottom: 0.35rem;
+  }
+
+  .docs-index-card:hover h3 {
+    color: #7f00ff;
+  }
+
+  .docs-index-card p {
+    font-size: 0.9rem;
+    color: #878787;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .docs-index-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
