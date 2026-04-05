@@ -2,6 +2,7 @@
 title: Managing Songs
 subtitle: Add, organize, and manage your audio library
 layout: ../../layouts/Docs.astro
+image: /docs/add-song.png
 ---
 
 ## Supported Audio Formats
@@ -17,6 +18,8 @@ Mx. Voice supports the following audio formats:
 - AAC (.aac)
 
 ## Adding a Single Song
+
+![Add Song](/docs/add-song.png)
 
 1. Open the **Add New Song** dialog.
 2. Select an audio file from your computer.
@@ -47,6 +50,8 @@ Mx. Voice scans the directory recursively (including subfolders) and for each au
 
 ## Editing Song Metadata
 
+![Edit Song](/docs/edit-song.png)
+
 1. Select a song in the search results.
 2. Open the edit dialog (double-click or use the edit action).
 3. Update the **Title**, **Artist**, **Category**, or **Info** fields.
@@ -63,6 +68,8 @@ Duration cannot be edited — it's always calculated from the audio file.
 Deleting a song removes it from the database and deletes the audio file from your music directory. The song is also removed from any hotkey or holding tank assignments.
 
 ## Managing Categories
+
+![Manage Categories](/docs/manage-categories.png)
 
 Categories help you organize your audio library. Each category has a short code (up to 4 uppercase letters) and a description.
 

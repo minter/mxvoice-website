@@ -36,11 +36,7 @@ If you need help, there are several ways to reach us:
 - **From the app:** Use the **Contact Support** menu item (in the Mx. Voice menu on macOS, or the Help menu on Windows/Linux). This opens your email client with a pre-addressed message to support@mxvoice.app.
 - **GitHub Issues:** Report bugs or request features at [github.com/minter/mxvoice-electron/issues](https://github.com/minter/mxvoice-electron/issues).
 
-<div class="callout">
-
-**Tip:** When reporting an issue, include your exported debug logs and a description of what you were doing when the problem occurred. This helps us diagnose the issue much faster.
-
-</div>
+> **Tip:** When reporting an issue, include your exported debug logs and a description of what you were doing when the problem occurred. This helps us diagnose the issue much faster.
 
 ## Audio Delay on Windows
 

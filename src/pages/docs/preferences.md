@@ -2,6 +2,7 @@
 title: Preferences
 subtitle: Configure directories, audio, appearance, and more
 layout: ../../layouts/Docs.astro
+image: /docs/preferences.png
 ---
 
 ## Opening Preferences
@@ -10,6 +11,8 @@ Open the Preferences dialog from **View → Preferences** in the menu bar, or us
 
 - **macOS:** Cmd+, (Command+Comma)
 - **Windows / Linux:** Ctrl+, (Control+Comma)
+
+![Preferences](/docs/preferences.png)
 
 ## Data Locations
 

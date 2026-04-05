@@ -2,6 +2,7 @@
 title: Backups
 subtitle: Automatic and manual backups of your profile data
 layout: ../../layouts/Docs.astro
+image: /docs/restore-backup.png
 ---
 
 ## Overview
@@ -26,6 +27,8 @@ Manual backups are useful before making major changes to your hotkey setup or ho
 
 ## Restoring from a Backup
 
+![Restore Backup](/docs/restore-backup.png)
+
 1. Go to **Profile → Restore from Backup...**
 2. A dialog shows all available backups, sorted newest first. Each backup shows:
    - Date and time
@@ -35,11 +38,7 @@ Manual backups are useful before making major changes to your hotkey setup or ho
 4. Confirm the restore in the dialog.
 5. The application reloads with the restored profile data.
 
-<div class="callout">
-
-**Safety net:** Before any restore, Mx. Voice automatically creates a "pre-restore" backup of your current profile. If you don't like the result, you can restore from the pre-restore backup to get back to where you were.
-
-</div>
+> **Safety net:** Before any restore, Mx. Voice automatically creates a "pre-restore" backup of your current profile. If you don't like the result, you can restore from the pre-restore backup to get back to where you were.
 
 ## Backup Settings
 

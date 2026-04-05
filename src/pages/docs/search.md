@@ -2,6 +2,7 @@
 title: Search
 subtitle: Find the right song fast, even in the middle of a show
 layout: ../../layouts/Docs.astro
+image: /docs/search-panel.png
 ---
 
 ## Overview
@@ -12,17 +13,23 @@ The Search panel occupies the center column of the Mx. Voice window. It's design
 
 The main search field searches across **title**, **artist**, and **info** fields simultaneously. Results appear live after you type 2 or more characters (with a short debounce delay for performance).
 
+![Search Panel](/docs/search-panel.png)
+
 Search is case-insensitive. Use **Cmd+L** (Mac) or **Ctrl+L** (Windows/Linux) to quickly focus the search field.
 
 ## Category Filtering
 
 The category dropdown at the top of the search panel lets you narrow results to a specific category. Select **"All"** to search across your entire library, or choose a specific category to filter.
 
+![Category Filtering](/docs/category-select.png)
+
 The category filter works in combination with the search field — you can filter by category and search by keyword at the same time.
 
 ## Advanced Search
 
 Click the search toggle button to switch to advanced search mode. This provides separate fields for more targeted filtering:
+
+![Advanced Search](/docs/advanced-search.png)
 
 | Field | What It Searches |
 | --- | --- |

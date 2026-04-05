@@ -46,11 +46,7 @@ The .mxvlib file is a compressed archive containing everything you need to recre
 
 After the restart, all your songs, profiles, hotkeys, and settings from the old machine are available.
 
-<div class="callout">
-
-**Important:** Importing **replaces** all existing data on the new machine. There is no merge option. If you've already set up songs or profiles on the new machine, they will be overwritten.
-
-</div>
+> **Important:** Importing **replaces** all existing data on the new machine. There is no merge option. If you've already set up songs or profiles on the new machine, they will be overwritten.
 
 ## Cross-Platform Transfers
 

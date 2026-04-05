@@ -8,21 +8,19 @@ layout: ../../layouts/Docs.astro
 
 Mx. Voice is free, open-source software available for macOS, Windows, and Linux.
 
-<div class="callout">
-
-**Download the latest version:**
-
-- [macOS (DMG)](https://download.mxvoice.app/download/dmg) — Universal binary for Intel and Apple Silicon
-- [Windows (EXE)](https://download.mxvoice.app/download/exe) — 64-bit installer
-- [Linux](https://github.com/minter/mxvoice-electron/releases) — AppImage and .deb packages available on GitHub
-
-</div>
+> **Download the latest version:**
+>
+> - [macOS (DMG)](https://download.mxvoice.app/download/dmg) — Universal binary for Intel and Apple Silicon
+> - [Windows (EXE)](https://download.mxvoice.app/download/exe) — 64-bit installer
+> - [Linux](https://github.com/minter/mxvoice-electron/releases) — AppImage and .deb packages available on GitHub
 
 Once downloaded, install the app the same way you would any other application on your platform. On macOS, open the DMG and drag Mx. Voice to your Applications folder. On Windows, run the installer and follow the prompts.
 
 ## Choose or Create a Profile
 
 When you first launch Mx. Voice, you'll see the **Profile Launcher**. Profiles let you maintain completely separate configurations — different hotkey setups, holding tank lists, and preferences for different shows, venues, or performers.
+
+![Profile Launcher](/docs/profile-launcher.png)
 
 On your very first launch, a **Default User** profile is created automatically. You can use it right away, or create a new one:
 
@@ -36,6 +34,8 @@ Select your profile and click **Choose Profile** to launch the main application.
 ## Configure Your Preferences
 
 Before importing songs, you'll want to set up a few directories. Open preferences from **View → Preferences** in the menu bar.
+
+![Preferences](/docs/preferences.png)
 
 ### Data Locations
 
@@ -80,11 +80,7 @@ The fastest way to populate your library is to import an entire folder of audio 
 
 Mx. Voice will scan the directory (including subfolders), extract metadata like title, artist, and duration from each file, and copy them into your configured audio directory.
 
-<div class="callout">
-
-**Supported audio formats:** MP3, WAV, OGG, FLAC, M4A, MP4, AAC
-
-</div>
+> **Supported audio formats:** MP3, WAV, OGG, FLAC, M4A, MP4, AAC
 
 ### Add Individual Songs
 
@@ -117,8 +113,4 @@ Now that you're up and running, here are some features to explore:
 - **Import / Export** — Save and load your hotkey setups (.mrv files) and holding tank lists (.hld files) so you can prepare in advance and share configurations between profiles.
 - **Advanced Search** — Toggle advanced search to filter by artist, additional info, or date added.
 
-<div class="callout">
-
-**Need help?** Visit the [GitHub Issues](https://github.com/minter/mxvoice-electron/issues) page to report bugs or request features.
-
-</div>
+> **Need help?** Visit the [GitHub Issues](https://github.com/minter/mxvoice-electron/issues) page to report bugs or request features.

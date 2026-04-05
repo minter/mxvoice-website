@@ -2,11 +2,14 @@
 title: Holding Tank
 subtitle: Stage songs for quick access or automatic playlist playback
 layout: ../../layouts/Docs.astro
+image: /docs/holding-tank.png
 ---
 
 ## Overview
 
 The Holding Tank is on the left side of the Mx. Voice window. It's a staging area where you can collect songs for a show. It operates in two modes: **Storage** for individual access, or **Playlist** for automatic sequential playback.
+
+![Holding Tank](/docs/holding-tank.png)
 
 ## Storage vs. Playlist Mode
 

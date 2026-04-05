@@ -8,18 +8,21 @@ interface Props {
   frontmatter?: {
     title: string;
     subtitle?: string;
+    image?: string;
   };
   title?: string;
   subtitle?: string;
+  image?: string;
 }
 
-const { frontmatter, title: directTitle, subtitle: directSubtitle } = Astro.props;
+const { frontmatter, title: directTitle, subtitle: directSubtitle, image: directImage } = Astro.props;
 const title = frontmatter?.title ?? directTitle ?? 'Documentation';
 const subtitle = frontmatter?.subtitle ?? directSubtitle ?? '';
+const image = frontmatter?.image ?? directImage;
 const currentPath = Astro.url.pathname;
 ---
 
-<Base title={title}>
+<Base title={title} description={subtitle} image={image}>
   <Navbar />
 
   <div class="hero hero-docs">

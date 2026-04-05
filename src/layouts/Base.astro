@@ -1,9 +1,17 @@
 ---
 interface Props {
   title: string;
+  description?: string;
+  image?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, image } = Astro.props;
+
+const defaultDescription = 'The software you\'ve trusted for 20 years to make your shows amazing. Rebuilt for modern performance.';
+const metaDescription = description || defaultDescription;
+const ogTitle = `Mx. Voice — ${title}`;
+const canonicalUrl = new URL(Astro.url.pathname, 'https://mxvoice.app').href;
+const ogImage = image ? new URL(image, 'https://mxvoice.app').href : 'https://mxvoice.app/og-image.png';
 ---
 
 <!DOCTYPE html>
@@ -12,30 +20,27 @@ const { title } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta name="description" content={metaDescription} />
+    <meta name="theme-color" content="#7f00ff" />
+    <link rel="canonical" href={canonicalUrl} />
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Mx. Voice - Improv Audio Software" />
-    <meta property="og:description" content="The software you've trusted for 20 years to make your shows amazing. Rebuilt for modern performance." />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mxvoice.app" />
-    <meta property="og:image" content="https://mxvoice.app/og-image.png" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:site_name" content="Mx. Voice" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mx. Voice - Improv Audio Software" />
-    <meta name="twitter:description" content="The software you've trusted for 20 years to make your shows amazing. Rebuilt for modern performance." />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={ogImage} />
 
     <title>Mx. Voice :: {title}</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167062269-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'UA-167062269-1');
-    </script>
 
     <style is:global>
       @import '../styles/global.css';

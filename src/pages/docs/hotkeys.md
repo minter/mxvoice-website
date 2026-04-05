@@ -1,12 +1,15 @@
 ---
 title: Hotkeys
 subtitle: Assign songs to function keys for instant playback
+image: /docs/hotkeys-panel.png
 layout: ../../layouts/Docs.astro
 ---
 
 ## Overview
 
 The Hotkeys panel is on the right side of the Mx. Voice window. It lets you assign songs to the F1 through F12 function keys for instant one-key playback during a show. You get **5 tabs** of hotkey sets, so you can prepare up to 60 songs for quick access.
+
+![Hotkeys panel](/docs/hotkeys-panel.png)
 
 ## Assigning Songs to Hotkeys
 

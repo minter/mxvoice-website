@@ -2,6 +2,7 @@
 title: Profiles
 subtitle: Separate configurations for different shows, venues, or performers
 layout: ../../layouts/Docs.astro
+image: /docs/profile-launcher.png
 ---
 
 ## Overview
@@ -11,6 +12,8 @@ Profiles let you maintain completely separate setups within Mx. Voice. Each prof
 ## The Profile Launcher
 
 When you start Mx. Voice, the Profile Launcher appears. It shows a list of all available profiles. Select one and click **Choose Profile**, or double-click a profile to launch it directly.
+
+![Profile Launcher](/docs/profile-launcher.png)
 
 You can search for profiles by name or description using the search field in the launcher.
 
@@ -25,6 +28,8 @@ On first launch, a **Default User** profile is created automatically. It appears
 3. Optionally enter a **Description** (e.g., "Friday night show at Club XYZ").
 4. Click **Create Profile**.
 
+![New Profile](/docs/new-profile.png)
+
 New profiles start with default preferences and empty hotkey and holding tank tabs. Profile names must be unique.
 
 ## Switching Profiles
@@ -35,11 +40,7 @@ To switch to a different profile, go to **View → Switch Profile** in the menu 
 
 Click the delete button next to a profile in the launcher. The Default User profile and the last remaining profile cannot be deleted.
 
-<div class="callout">
-
-**Warning:** Deleting a profile permanently removes all of its hotkey assignments, holding tank lists, and preferences. Your song database and audio files are not affected.
-
-</div>
+> **Warning:** Deleting a profile permanently removes all of its hotkey assignments, holding tank lists, and preferences. Your song database and audio files are not affected.
 
 ## What's Isolated per Profile
 
