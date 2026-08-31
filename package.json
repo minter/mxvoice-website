@@ -11,7 +11,7 @@
   "author": "Wade Minter",
   "license": "MIT",
   "dependencies": {
-    "astro": "^7.2.4"
+    "astro": "^7.2.9"
   },
   "overrides": {
     "esbuild": "0.28.1"
