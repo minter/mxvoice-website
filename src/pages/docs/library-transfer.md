@@ -26,8 +26,8 @@ The .mxvlib file is a compressed archive containing everything you need to recre
 | --- | --- |
 | **Song database** | All songs with their metadata (titles, artists, categories, info, durations). |
 | **Audio files** | All music files in your audio directory. |
-| **Profiles** | All user profiles with their individual preferences and state (holding tank contents, tab names, etc.). |
-| **Hotkey files** | All saved .mrv hotkey configuration files. |
+| **Profiles** | All user profiles with their individual preferences and saved [shows](/docs/shows/). |
+| **Hotkey files** | All saved .mrv hotkey tab files. |
 | **Settings** | Global preferences (fade duration, screen mode, etc.). Directory paths are automatically remapped on import. |
 
 ## Importing on the New Machine

@@ -14,6 +14,14 @@ If a song shows a warning icon and "File not found" in the playback bar, the aud
 
 To fix this, either move the file back to the configured audio directory, or re-import it using the Add Song or Bulk Import features.
 
+## Hotkeys or Holding Tank Changes Weren't Kept
+
+Starting in version 4.4, your hotkeys and holding tank are saved as a [show](/docs/shows/), and changes are kept only when you choose **Shows → Save**. Quitting or switching profiles doesn't save them. A dot after the show name in the header means there are unsaved changes.
+
+## Recovering After a Crash
+
+If Mx. Voice doesn't close normally, the next launch asks whether to restore the show in progress. Press **Return** to restore it, including the layout on screen and your played counts. See [Crash Recovery](/docs/shows/#crash-recovery).
+
 ## Exporting Debug Logs
 
 If you're experiencing an issue, debug logs can help diagnose the problem. Make sure debug logging is enabled in [Preferences](/docs/preferences/), then reproduce the issue.

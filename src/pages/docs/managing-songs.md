@@ -19,7 +19,7 @@ Mx. Voice supports the following audio formats:
 
 ## Adding a Single Song
 
-![Add Song](/docs/add-song.png)
+<img src="/docs/add-song.png" alt="Add Song" width="500" />
 
 1. Open the **Add New Song** dialog.
 2. Select an audio file from your computer.
@@ -50,7 +50,7 @@ Mx. Voice scans the directory recursively (including subfolders) and for each au
 
 ## Editing Song Metadata
 
-![Edit Song](/docs/edit-song.png)
+<img src="/docs/edit-song.png" alt="Edit Song" width="500" />
 
 1. Select a song in the search results.
 2. Open the edit dialog (double-click or use the edit action).
@@ -69,7 +69,7 @@ Deleting a song removes it from the database and deletes the audio file from you
 
 ## Managing Categories
 
-![Manage Categories](/docs/manage-categories.png)
+<img src="/docs/manage-categories.png" alt="Manage Categories" width="500" />
 
 Categories help you organize your audio library. Each category has a short code (up to 4 uppercase letters) and a description.
 

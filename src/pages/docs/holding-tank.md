@@ -9,7 +9,9 @@ image: /docs/holding-tank.png
 
 The Holding Tank is on the left side of the Mx. Voice window. It's a staging area where you can collect songs for a show. It operates in two modes: **Storage** for individual access, or **Playlist** for automatic sequential playback.
 
-![Holding Tank](/docs/holding-tank.png)
+The holding tank is part of the loaded [show](/docs/shows/). Changes are kept only when you save the show with **Shows → Save**.
+
+<img src="/docs/holding-tank.png" alt="Holding Tank" width="300" />
 
 ## Storage vs. Playlist Mode
 
@@ -32,19 +34,27 @@ Songs can be reordered by dragging them within the holding tank list.
 Like hotkeys, the holding tank has **5 tabs** for organizing different groups of songs. Each tab maintains its own song list independently.
 
 - **Switch tabs** by clicking the tab numbers (1–5).
-- **Rename a tab** by clicking the pencil icon in the header.
+- **Rename a tab** by double-clicking it, or by choosing **Rename** from the **⋯** menu at the end of the tab row.
+
+The **⋯** menu (or right-clicking a tab) has every tab action: rename, clear, **Save Tab to File…**, and **Load Tab from File…**.
 
 ## Removing Songs
 
 - **Remove one** — Select a song and press **Delete** to remove it from the list.
-- **Clear all** — Click the trash icon in the header to empty the current tab. A confirmation dialog appears first.
+- **Clear a tab** — Choose **Clear** from the tab's **⋯** menu to empty that tab. A confirmation dialog appears first, and the songs stay in your library.
 
-## Importing and Exporting
+## Saving and Loading
 
-Save and load holding tank lists as **.hld files**. This is useful for preparing setlists in advance.
+To keep the whole layout — every holding tank tab and all of your hotkeys — save it as a [show](/docs/shows/) with **Shows → Save** or **Save As…**.
 
-- **Export** — Click the save icon to save the current tab's song list.
-- **Import** — Click the folder icon to load a saved .hld file into the current tab.
+To keep a single tab, such as a pre-show playlist, save it as a **.hld file** from the tab's **⋯** menu:
+
+- **Save Tab to File…** — Saves that tab's song list to a .hld file.
+- **Load Tab from File…** — Loads a .hld file into that tab. If the tab already has songs, Mx. Voice asks first.
+
+## Played Counts
+
+A **▶ count** appears next to any song you've played during the current session, so you can see what's been used without removing it from the list. See [Played Counts](/docs/shows/#played-counts).
 
 ## Right-Click Menu
 
@@ -53,6 +63,7 @@ Right-click on any song in the holding tank to see a context menu with these opt
 - **Play** — Play the song.
 - **Edit** — Edit the song's metadata.
 - **Remove from Holding Tank** — Remove the song from the list without deleting it from your library.
+- **Mark as Unplayed** — Clear the song's played count.
 
 ## Keyboard Shortcuts
 
