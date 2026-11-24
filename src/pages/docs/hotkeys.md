@@ -11,7 +11,7 @@ The Hotkeys panel is on the right side of the Mx. Voice window. It lets you assi
 
 Your hotkeys are part of the loaded [show](/docs/shows/). Changes are kept only when you save the show with **Shows → Save**.
 
-![Hotkeys panel](/docs/hotkeys-panel.png)
+<img src="/docs/hotkeys-panel.png" alt="Hotkeys panel" width="300" />
 
 ## Assigning Songs to Hotkeys
 

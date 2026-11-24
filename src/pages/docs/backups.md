@@ -27,7 +27,7 @@ Manual backups are useful before making major changes to your hotkey setup or ho
 
 ## Restoring from a Backup
 
-![Restore Backup](/docs/restore-backup.png)
+<img src="/docs/restore-backup.png" alt="Restore Backup" width="800" />
 
 1. Go to **Profile → Restore from Backup...**
 2. A dialog shows all available backups, sorted newest first. Each backup shows:

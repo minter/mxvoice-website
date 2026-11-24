@@ -13,15 +13,15 @@ The Search panel occupies the center column of the Mx. Voice window. It's design
 
 The main search field searches across **title**, **artist**, and **info** fields simultaneously. Results appear live after you type 2 or more characters (with a short debounce delay for performance).
 
-![Search Panel](/docs/search-panel.png)
+<img src="/docs/search-panel.png" alt="Search Panel" width="552" />
 
 Search is case-insensitive. Use **Cmd+L** (Mac) or **Ctrl+L** (Windows/Linux) to quickly focus the search field.
 
 ## Category Filtering
 
-The category dropdown at the top of the search panel lets you narrow results to a specific category. Select **"All"** to search across your entire library, or choose a specific category to filter.
+The category dropdown at the top of the search panel lets you narrow results to a specific category. Select **"All Categories"** to search across your entire library, or choose a specific category to filter.
 
-![Category Filtering](/docs/category-select.png)
+<img src="/docs/category-select.png" alt="Category Filtering" width="552" />
 
 The category filter works in combination with the search field — you can filter by category and search by keyword at the same time.
 
@@ -29,7 +29,7 @@ The category filter works in combination with the search field — you can filte
 
 Click the search toggle button to switch to advanced search mode. This provides separate fields for more targeted filtering:
 
-![Advanced Search](/docs/advanced-search.png)
+<img src="/docs/advanced-search.png" alt="Advanced Search" width="552" />
 
 | Field | What It Searches |
 | --- | --- |

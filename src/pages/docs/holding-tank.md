@@ -11,7 +11,7 @@ The Holding Tank is on the left side of the Mx. Voice window. It's a staging are
 
 The holding tank is part of the loaded [show](/docs/shows/). Changes are kept only when you save the show with **Shows → Save**.
 
-![Holding Tank](/docs/holding-tank.png)
+<img src="/docs/holding-tank.png" alt="Holding Tank" width="300" />
 
 ## Storage vs. Playlist Mode
 

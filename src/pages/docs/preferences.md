@@ -12,7 +12,7 @@ Open the Preferences dialog from the **Mx. Voice** menu on macOS or the **Edit**
 - **macOS:** Cmd+, (Command+Comma)
 - **Windows / Linux:** Ctrl+, (Control+Comma)
 
-![Preferences](/docs/preferences.png)
+<img src="/docs/preferences.png" alt="Preferences" width="800" />
 
 ## Data Locations
 

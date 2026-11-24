@@ -20,22 +20,22 @@ Once downloaded, install the app the same way you would any other application on
 
 When you first launch Mx. Voice, you'll see the **Profile Launcher**. Profiles let you maintain completely separate setups — each with its own saved shows and preferences — for different performers or teams.
 
-![Profile Launcher](/docs/profile-launcher.png)
+<img src="/docs/profile-launcher.png" alt="Profile Launcher" width="420" />
 
 On your very first launch, a **Default User** profile is created automatically. You can use it right away, or create a new one:
 
-1. Click the **+ New Profile** button in the launcher header.
+1. Click the **New profile** button in the launcher.
 2. Enter a **Profile Name** (letters, numbers, spaces, hyphens, and underscores are allowed).
 3. Optionally add a **Description** (e.g., "Saturday night show at Club XYZ").
-4. Click **Create Profile**.
+4. Click **Create profile**.
 
-Select your profile and click **Choose Profile** to launch the main application. You can switch profiles later from the **Profile** menu.
+Select your profile and click **Open** to launch the main application. You can switch profiles later from the **Profile** menu.
 
 ## Configure Your Preferences
 
 Before importing songs, you'll want to set up a few directories. Open Preferences from the **Mx. Voice** menu on macOS, or the **Edit** menu on Windows and Linux.
 
-![Preferences](/docs/preferences.png)
+<img src="/docs/preferences.png" alt="Preferences" width="800" />
 
 ### Data Locations
 

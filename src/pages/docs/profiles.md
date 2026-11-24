@@ -13,9 +13,9 @@ If you just want different layouts for different venues, teams, or formats, you 
 
 ## The Profile Launcher
 
-When you start Mx. Voice, the Profile Launcher appears. It shows a list of all available profiles. Select one and click **Choose Profile**, or double-click a profile to launch it directly.
+When you start Mx. Voice, the Profile Launcher appears. It shows a list of all available profiles. Select one and click **Open**, or double-click a profile to open it directly.
 
-![Profile Launcher](/docs/profile-launcher.png)
+<img src="/docs/profile-launcher.png" alt="Profile Launcher" width="420" />
 
 You can search for profiles by name or description using the search field in the launcher.
 
@@ -25,18 +25,20 @@ On first launch, a **Default User** profile is created automatically. It appears
 
 ## Creating a Profile
 
-1. Click **+ New Profile** in the launcher header.
+1. Click **New profile** in the launcher, or choose **Profile → New Profile…** in the menu bar.
 2. Enter a **Profile Name** (required, up to 50 characters). Letters, numbers, spaces, hyphens, and underscores are allowed.
 3. Optionally enter a **Description** (e.g., "Friday night show at Club XYZ").
-4. Click **Create Profile**.
+4. Click **Create profile**.
 
-![New Profile](/docs/new-profile.png)
+<img src="/docs/new-profile.png" alt="New Profile" width="500" />
 
 New profiles start with default preferences and empty hotkey and holding tank tabs. To bring in a layout from another profile, use **Shows → Import Show from Another Profile…**. Profile names must be unique.
 
 ## Switching Profiles
 
 To switch to a different profile, go to **Profile → Switch Profile…** in the menu bar. The profile list opens right in the window, without restarting the app. Your current profile is grayed out, and **Esc** takes you back.
+
+<img src="/docs/switch-profile.png" alt="Switch Profile" width="500" />
 
 Switching profiles doesn't save the loaded show. If you've made changes you want to keep, use **Shows → Save** first.
 

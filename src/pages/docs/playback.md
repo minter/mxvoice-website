@@ -9,7 +9,7 @@ image: /docs/playback-controls.png
 
 The playback controls are at the bottom of the Mx. Voice window. They show the currently playing song, a progress bar with elapsed and remaining time, and buttons for controlling playback.
 
-![Playback Controls](/docs/playback-controls.png)
+<img src="/docs/playback-controls.png" alt="Playback Controls" width="1176" />
 
 ## Play, Pause, and Stop
 
@@ -40,7 +40,7 @@ Click the **loop button** to repeat the current song continuously. When the song
 
 ## Waveform Display
 
-![Waveform Display](/docs/waveform.png)
+<img src="/docs/waveform.png" alt="Waveform Display" width="1176" />
 
 Click the **waveform button** to toggle a visual waveform of the playing audio. The waveform shows the amplitude of the audio and a position indicator that tracks playback progress. You can click on the waveform to seek to a specific position in the song.
 
