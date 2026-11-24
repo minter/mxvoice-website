@@ -7,10 +7,10 @@ image: /docs/preferences.png
 
 ## Opening Preferences
 
-Open the Preferences dialog from the **Mx. Voice** menu on macOS or the **Edit** menu on Windows and Linux, or use the keyboard shortcut:
+Open the Preferences dialog from the **Mx. Voice** menu on macOS or the **Edit** menu on Windows, or use the keyboard shortcut:
 
 - **macOS:** Cmd+, (Command+Comma)
-- **Windows / Linux:** Ctrl+, (Control+Comma)
+- **Windows:** Ctrl+, (Control+Comma)
 
 <img src="/docs/preferences.png" alt="Preferences" width="800" />
 

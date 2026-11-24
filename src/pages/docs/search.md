@@ -15,7 +15,7 @@ The main search field searches across **title**, **artist**, and **info** fields
 
 <img src="/docs/search-panel.png" alt="Search Panel" width="552" />
 
-Search is case-insensitive. Use **Cmd+L** (Mac) or **Ctrl+L** (Windows/Linux) to quickly focus the search field.
+Search is case-insensitive. Use **Cmd+L** (Mac) or **Ctrl+L** (Windows) to quickly focus the search field.
 
 ## Category Filtering
 

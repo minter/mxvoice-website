@@ -50,7 +50,7 @@ After the restart, all your songs, profiles, hotkeys, and settings from the old 
 
 ## Cross-Platform Transfers
 
-You can export on one platform and import on another (e.g., Mac to Windows, Windows to Linux). Mx. Voice handles the differences automatically:
+You can export on one platform and import on another (Mac to Windows, or Windows to Mac). Mx. Voice handles the differences automatically:
 
 - **File paths** are remapped to the new platform's default locations.
 - **Filenames** are sanitized for compatibility (e.g., characters like `:` that are valid on Mac but not on Windows).

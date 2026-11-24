@@ -6,13 +6,12 @@ layout: ../../layouts/Docs.astro
 
 ## Download and Install
 
-Mx. Voice is free, open-source software available for macOS, Windows, and Linux.
+Mx. Voice is free, open-source software available for macOS and Windows.
 
 > **Download the latest version:**
 >
 > - [macOS (DMG)](https://download.mxvoice.app/download/dmg) — Universal binary for Intel and Apple Silicon
 > - [Windows (EXE)](https://download.mxvoice.app/download/exe) — 64-bit installer
-> - [Linux](https://github.com/minter/mxvoice-electron/releases) — AppImage and .deb packages available on GitHub
 
 Once downloaded, install the app the same way you would any other application on your platform. On macOS, open the DMG and drag Mx. Voice to your Applications folder. On Windows, run the installer and follow the prompts.
 
@@ -33,7 +32,7 @@ Select your profile and click **Open** to launch the main application. You can s
 
 ## Configure Your Preferences
 
-Before importing songs, you'll want to set up a few directories. Open Preferences from the **Mx. Voice** menu on macOS, or the **Edit** menu on Windows and Linux.
+Before importing songs, you'll want to set up a few directories. Open Preferences from the **Mx. Voice** menu on macOS, or the **Edit** menu on Windows.
 
 <img src="/docs/preferences.png" alt="Preferences" width="800" />
 

@@ -4,11 +4,11 @@ subtitle: Keep Mx. Voice up to date with the latest features and fixes
 layout: ../../layouts/Docs.astro
 ---
 
-## Automatic Updates (macOS and Windows)
+## Automatic Updates
 
-On macOS and Windows, Mx. Voice checks for updates automatically when the app launches. If a new version is available, you'll see a notification with the version number and release notes.
+Mx. Voice checks for updates automatically when the app launches. If a new version is available, you'll see a notification with the version number and release notes.
 
-To look for a new version at any time, choose **Check for Updates…** from the **Mx. Voice** menu on macOS or the **Help** menu on Windows and Linux.
+To look for a new version at any time, choose **Check for Updates…** from the **Mx. Voice** menu on macOS or the **Help** menu on Windows.
 
 ### Update Flow
 
@@ -33,15 +33,11 @@ You can always download the latest version directly:
 
 - [macOS (DMG)](https://download.mxvoice.app/download/dmg) — Universal binary for Intel and Apple Silicon
 - [Windows (EXE)](https://download.mxvoice.app/download/exe) — 64-bit installer
-- [All releases on GitHub](https://github.com/minter/mxvoice-electron/releases) — includes Linux AppImage and .deb packages
-
-## Linux Updates
-
-Automatic updates are not available on Linux. To update, download the latest AppImage or .deb package from the [GitHub releases page](https://github.com/minter/mxvoice-electron/releases) and install it over your existing version.
+- [All releases on GitHub](https://github.com/minter/mxvoice-electron/releases)
 
 ## Release Notes
 
 You can view release notes for any version at any time:
 
-- In the app, the update dialog shows release notes for the new version. **Release Notes** and **What's New** are also in the Mx. Voice menu on macOS and the Help menu on Windows and Linux.
+- In the app, the update dialog shows release notes for the new version. **Release Notes** and **What's New** are also in the Mx. Voice menu on macOS and the Help menu on Windows.
 - On the web, visit the [GitHub releases page](https://github.com/minter/mxvoice-electron/releases).

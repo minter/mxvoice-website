@@ -73,4 +73,3 @@ Profile data is stored in your system's application data directory:
 | --- | --- |
 | **macOS** | `~/Library/Application Support/Mx. Voice/` |
 | **Windows** | `%APPDATA%\Mx. Voice\` |
-| **Linux** | `~/.config/Mx. Voice/` |
