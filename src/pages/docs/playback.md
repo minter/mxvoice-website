@@ -23,8 +23,11 @@ The playback controls are at the bottom of the Mx. Voice window. They show the c
 
 Mx. Voice can fade audio to silence instead of cutting it off abruptly. The fade duration is configurable in [Preferences](/docs/preferences/) (default: 3 seconds).
 
-- **Esc** — Stop immediately (no fade).
-- **Shift+Esc** — Stop with a smooth fade-out.
+- **Tap Esc** — Stop immediately (no fade).
+- **Hold Esc** — Fade out. This leaves your other hand free.
+- **Shift+Esc** — Also fades out.
+
+Press **Esc** again during a fade to cut the audio right away. When a dialog is open, **Esc** closes the dialog and leaves the music playing.
 
 ## Volume and Mute
 
@@ -52,7 +55,8 @@ The center of the playback bar shows the currently playing song's title and arti
 | **Enter / Return** | Play selected song |
 | **Space** | Pause / Resume playback |
 | **Shift+Space** | Pause all audio |
-| **Esc** | Stop playback (immediate) |
+| **Esc** (tap) | Stop playback (immediate) |
+| **Esc** (hold) | Stop with fade-out |
 | **Shift+Esc** | Stop with fade-out |
 | **Cmd/Ctrl+W** | Toggle waveform display |
 | **Cmd/Ctrl+L** | Focus the search field |

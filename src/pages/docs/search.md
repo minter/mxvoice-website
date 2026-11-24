@@ -50,6 +50,8 @@ Results are displayed in a table with the following columns:
 - **Artist**
 - **Duration** — shown in MM:SS format
 
+A **▶ count** appears next to any song you've played during the current session. See [Played Counts](/docs/shows/#played-counts).
+
 Click a song to select it. From there you can:
 
 - **Play it** with the playback controls or press **Enter**.
@@ -65,6 +67,7 @@ Right-click on any song in the search results for quick actions:
 - **Play** — Play the song.
 - **Edit** — Edit the song's metadata.
 - **Delete** — Delete the song from your library.
+- **Mark as Unplayed** — Clear the song's played count.
 
 ## Keyboard Shortcuts
 

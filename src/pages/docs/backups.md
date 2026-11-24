@@ -7,7 +7,7 @@ image: /docs/restore-backup.png
 
 ## Overview
 
-Mx. Voice automatically backs up your profile data at regular intervals. Each backup is a complete snapshot of your profile, including hotkey assignments, holding tank lists, and preferences. You can also create backups manually and restore from any previous backup.
+Mx. Voice automatically backs up your profile data at regular intervals. Each backup is a complete snapshot of your profile, including your [shows](/docs/shows/) and preferences. You can also create backups manually and restore from any previous backup.
 
 All backup features are accessed from the **Profile** menu.
 
@@ -38,6 +38,8 @@ Manual backups are useful before making major changes to your hotkey setup or ho
 4. Confirm the restore in the dialog.
 5. The application reloads with the restored profile data.
 
+The confirmation tells you which shows the backup contains. Backups made before version 4.4 have no shows: restoring one turns its layout into a show named **Default Show**. That layout may be from the middle of a performance rather than a prepared one.
+
 > **Safety net:** Before any restore, Mx. Voice automatically creates a "pre-restore" backup of your current profile. If you don't like the result, you can restore from the pre-restore backup to get back to where you were.
 
 ## Backup Settings
@@ -57,9 +59,7 @@ When both the count and age limits are reached, the oldest backups are removed f
 
 Each backup is a complete snapshot of your profile directory, including:
 
-- Hotkey assignments (all 5 tabs)
-- Holding tank lists (all 5 tabs)
-- Tab names
+- Your saved shows — hotkey assignments, holding tank lists, and tab names for each
 - Profile-specific preferences
 - UI state (playback settings, layout)
 

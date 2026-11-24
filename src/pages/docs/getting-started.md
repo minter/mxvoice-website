@@ -18,7 +18,7 @@ Once downloaded, install the app the same way you would any other application on
 
 ## Choose or Create a Profile
 
-When you first launch Mx. Voice, you'll see the **Profile Launcher**. Profiles let you maintain completely separate configurations — different hotkey setups, holding tank lists, and preferences for different shows, venues, or performers.
+When you first launch Mx. Voice, you'll see the **Profile Launcher**. Profiles let you maintain completely separate setups — each with its own saved shows and preferences — for different performers or teams.
 
 ![Profile Launcher](/docs/profile-launcher.png)
 
@@ -29,11 +29,11 @@ On your very first launch, a **Default User** profile is created automatically. 
 3. Optionally add a **Description** (e.g., "Saturday night show at Club XYZ").
 4. Click **Create Profile**.
 
-Select your profile and click **Choose Profile** to launch the main application. You can switch profiles later from the **View** menu.
+Select your profile and click **Choose Profile** to launch the main application. You can switch profiles later from the **Profile** menu.
 
 ## Configure Your Preferences
 
-Before importing songs, you'll want to set up a few directories. Open preferences from **View → Preferences** in the menu bar.
+Before importing songs, you'll want to set up a few directories. Open Preferences from the **Mx. Voice** menu on macOS, or the **Edit** menu on Windows and Linux.
 
 ![Preferences](/docs/preferences.png)
 
@@ -43,7 +43,7 @@ Before importing songs, you'll want to set up a few directories. Open preference
 | --- | --- |
 | **Audio Files Directory** | Where your audio files are stored. When you import songs, files are copied here. Set this before adding any songs. |
 | **Database File Location** | Where the song database lives. The default location works well for most users. |
-| **Hotkeys / Holding Tank Directory** | Where saved hotkey and holding tank configuration files are kept. |
+| **Hotkeys / Holding Tank Directory** | Where saved hotkey and holding tank tab files are kept. |
 
 ### Other Settings
 
@@ -110,7 +110,8 @@ Now that you're up and running, here are some features to explore:
 
 - **Hotkeys** — Drag songs from search results onto the hotkey buttons in the right column. Assign them to F1–F12 for instant playback during shows. You get 5 tabs of hotkey sets to work with.
 - **Holding Tank** — Drag songs to the left column for quick access. Switch to **Playlist mode** and enable **Autoplay** to play through songs sequentially.
-- **Import / Export** — Save and load your hotkey setups (.mrv files) and holding tank lists (.hld files) so you can prepare in advance and share configurations between profiles.
+- **Shows** — Save your hotkeys and holding tank as a [show](/docs/shows/) with **Shows → Save**, and keep a separate show for each venue, team, or format. Changes are kept only when you save them.
+- **Tab Files** — Save a single hotkey tab (.mrv file) or holding tank tab (.hld file) from the tab's **⋯** menu, and load it into any show.
 - **Advanced Search** — Toggle advanced search to filter by artist, additional info, or date added.
 
 > **Need help?** Visit the [GitHub Issues](https://github.com/minter/mxvoice-electron/issues) page to report bugs or request features.
